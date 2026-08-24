@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DHaudiovisuales</title>
-<meta name="description" content="Apps de Diego Herrero García (DHaudiovisuales): AllOk, QuickTemp y PuckSlide.">
+<meta name="description" content="AllOk, QuickTemp y PuckSlide — apps de DHaudiovisuales.">
 <style>
   :root {
     --primary: #0F766E;
+    --primary-light: #14B8A6;
     --secondary: #115E59;
     --bg: #F8FAFC;
     --surface: #FFFFFF;
     --text: #1E293B;
-    --text-muted: #475569;
+    --text-muted: #64748B;
     --border: #E2E8F0;
   }
   * { box-sizing: border-box; }
@@ -23,68 +24,99 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
   }
+
   header {
-    background: var(--primary);
+    position: relative;
+    background: linear-gradient(135deg, #0F766E 0%, #115E59 55%, #0B4A44 100%);
     color: #fff;
-    padding: 48px 20px 56px;
+    padding: 72px 20px 92px;
     text-align: center;
+    overflow: hidden;
   }
+  header::before, header::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+  }
+  header::before { width: 340px; height: 340px; top: -160px; right: -80px; }
+  header::after { width: 220px; height: 220px; bottom: -120px; left: -60px; background: rgba(255,255,255,0.05); }
+
   header .logo {
-    width: 56px; height: 56px; margin: 0 auto 16px;
+    position: relative;
+    width: 64px; height: 64px; margin: 0 auto 20px;
     background: #fff; color: var(--primary);
-    border-radius: 14px; display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 26px;
+    border-radius: 18px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 28px; letter-spacing: -1px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   }
-  header h1 { margin: 0 0 8px; font-size: 26px; }
-  header p { margin: 0; opacity: 0.9; font-size: 15px; }
+  header h1 {
+    position: relative;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
 
   main {
-    max-width: 760px;
-    margin: -32px auto 0;
+    max-width: 720px;
+    margin: -48px auto 0;
     padding: 0 20px 60px;
+    position: relative;
   }
 
   .app-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 20px;
+    border-radius: 18px;
+    padding: 26px;
+    margin-bottom: 18px;
     display: flex;
-    gap: 18px;
+    gap: 20px;
     align-items: flex-start;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .app-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.10);
   }
   .app-icon {
-    width: 64px; height: 64px; border-radius: 16px;
+    width: 68px; height: 68px; border-radius: 18px;
     flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
-    font-size: 30px;
+    font-size: 32px;
     color: #fff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   }
   .app-info { flex: 1; min-width: 0; }
-  .app-info h2 { margin: 0 0 4px; font-size: 18px; color: var(--secondary); }
-  .app-info p { margin: 0 0 14px; font-size: 14px; color: var(--text-muted); }
+  .app-info h2 { margin: 0 0 6px; font-size: 19px; color: var(--secondary); font-weight: 700; }
+  .app-info p { margin: 0 0 16px; font-size: 14.5px; color: var(--text-muted); }
   .app-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-size: 14px;
-    font-weight: 600;
-    color: var(--primary);
+    font-weight: 700;
+    color: #fff;
     text-decoration: none;
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    padding: 8px 16px;
+    background: var(--primary);
+    border-radius: 10px;
+    padding: 9px 18px;
+    transition: background 0.15s ease;
   }
+  .app-link:hover { background: var(--primary-light); }
   .app-link.disabled {
     color: var(--text-muted);
-    border-color: var(--border);
+    background: var(--bg);
+    border: 1px solid var(--border);
     cursor: default;
   }
 
   footer {
-    max-width: 760px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 0 20px 40px;
+    padding: 8px 20px 48px;
     font-size: 13px;
     color: var(--text-muted);
     text-align: center;
@@ -96,12 +128,11 @@
 <header>
   <div class="logo">DH</div>
   <h1>DHaudiovisuales</h1>
-  <p>Apps de Diego Herrero García</p>
 </header>
 <main>
 
   <div class="app-card">
-    <div class="app-icon" style="background:#0F766E;">✓</div>
+    <div class="app-icon" style="background:linear-gradient(135deg,#14B8A6,#0F766E);">✓</div>
     <div class="app-info">
       <h2>AllOk</h2>
       <p>App de check-ins de seguridad: confirma que estás bien periódicamente, y si no lo haces, avisamos a tu contacto de confianza.</p>
@@ -110,20 +141,20 @@
   </div>
 
   <div class="app-card">
-    <div class="app-icon" style="background:#0EA5E9;">🌡️</div>
+    <div class="app-icon" style="background:linear-gradient(135deg,#38BDF8,#0284C7);">🌡️</div>
     <div class="app-info">
       <h2>QuickTemp - Tiempo y Mareas</h2>
       <p>Previsión meteorológica exacta, radar de lluvia, temperatura del agua del mar y tabla de mareas en tu ubicación, sin registros ni menús complejos.</p>
-      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.diegohg.quicktemp" target="_blank" rel="noopener">Ver en Google Play</a>
+      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.diegohg.quicktemp" target="_blank" rel="noopener">Ver en Google Play →</a>
     </div>
   </div>
 
   <div class="app-card">
-    <div class="app-icon" style="background:#B45309;">🎯</div>
+    <div class="app-icon" style="background:linear-gradient(135deg,#F59E0B,#B45309);">🎯</div>
     <div class="app-info">
       <h2>PuckSlide: Billar holandés</h2>
       <p>El clásico juego de mesa holandés (sjoelen) en 3D. Juega en local o compite online por clasificación mundial, en 19 idiomas.</p>
-      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.diegohgc.billarholandes" target="_blank" rel="noopener">Ver en Google Play</a>
+      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.diegohgc.billarholandes" target="_blank" rel="noopener">Ver en Google Play →</a>
     </div>
   </div>
 
