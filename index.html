@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHaudiovisuales</title>
+<meta name="description" content="Apps de Diego Herrero García (DHaudiovisuales): AllOk, QuickTemp y PuckSlide.">
+<style>
+  :root {
+    --primary: #0F766E;
+    --secondary: #115E59;
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --text: #1E293B;
+    --text-muted: #475569;
+    --border: #E2E8F0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 48px 20px 56px;
+    text-align: center;
+  }
+  header .logo {
+    width: 56px; height: 56px; margin: 0 auto 16px;
+    background: #fff; color: var(--primary);
+    border-radius: 14px; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 26px;
+  }
+  header h1 { margin: 0 0 8px; font-size: 26px; }
+  header p { margin: 0; opacity: 0.9; font-size: 15px; }
+
+  main {
+    max-width: 760px;
+    margin: -32px auto 0;
+    padding: 0 20px 60px;
+  }
+
+  .app-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .app-icon {
+    width: 64px; height: 64px; border-radius: 16px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px;
+    color: #fff;
+  }
+  .app-info { flex: 1; min-width: 0; }
+  .app-info h2 { margin: 0 0 4px; font-size: 18px; color: var(--secondary); }
+  .app-info p { margin: 0 0 14px; font-size: 14px; color: var(--text-muted); }
+  .app-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 8px 16px;
+  }
+  .app-link.disabled {
+    color: var(--text-muted);
+    border-color: var(--border);
+    cursor: default;
+  }
+
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  footer a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">DH</div>
+  <h1>DHaudiovisuales</h1>
+  <p>Apps de Diego Herrero García</p>
+</header>
+<main>
+
+  <div class="app-card">
+    <div class="app-icon" style="background:#0F766E;">✓</div>
+    <div class="app-info">
+      <h2>AllOk</h2>
+      <p>App de check-ins de seguridad: confirma que estás bien periódicamente, y si no lo haces, avisamos a tu contacto de confianza.</p>
+      <span class="app-link disabled">Próximamente en Google Play</span>
+    </div>
+  </div>
+
+  <div class="app-card">
+    <div class="app-icon" style="background:#0EA5E9;">🌡️</div>
+    <div class="app-info">
+      <h2>QuickTemp - Tiempo y Mareas</h2>
+      <p>Previsión meteorológica exacta, radar de lluvia, temperatura del agua del mar y tabla de mareas en tu ubicación, sin registros ni menús complejos.</p>
+      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.diegohg.quicktemp" target="_blank" rel="noopener">Ver en Google Play</a>
+    </div>
+  </div>
+
+  <div class="app-card">
+    <div class="app-icon" style="background:#B45309;">🎯</div>
+    <div class="app-info">
+      <h2>PuckSlide: Billar holandés</h2>
+      <p>El clásico juego de mesa holandés (sjoelen) en 3D. Juega en local o compite online por clasificación mundial, en 19 idiomas.</p>
+      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.diegohgc.billarholandes" target="_blank" rel="noopener">Ver en Google Play</a>
+    </div>
+  </div>
+
+</main>
+<footer>
+  <p>Contacto: <a href="mailto:dhaudiovisuales@gmail.com">dhaudiovisuales@gmail.com</a></p>
+</footer>
+</body>
+</html>
