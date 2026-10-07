@@ -89,6 +89,7 @@
     color: #fff;
     box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   }
+  img.app-icon { display: block; object-fit: cover; }
   .app-info { flex: 1; min-width: 0; }
   .app-info h2 { margin: 0 0 6px; font-size: 19px; color: var(--secondary); font-weight: 700; }
   .app-info p { margin: 0 0 16px; font-size: 14.5px; color: var(--text-muted); }
@@ -132,11 +133,11 @@
 <main>
 
   <div class="app-card">
-    <div class="app-icon" style="background:linear-gradient(135deg,#14B8A6,#0F766E);">✓</div>
+    <img class="app-icon" src="img/allok.png" width="68" height="68" alt="Logo de AllOk">
     <div class="app-info">
       <h2>AllOk</h2>
       <p>App de check-ins de seguridad: confirma que estás bien periódicamente, y si no lo haces, avisamos a tu contacto de confianza.</p>
-      <span class="app-link disabled">Próximamente en Google Play</span>
+      <a class="app-link" href="https://play.google.com/store/apps/details?id=com.dhaudiovisuales.allok" target="_blank" rel="noopener">Ver en Google Play →</a>
     </div>
   </div>
 
