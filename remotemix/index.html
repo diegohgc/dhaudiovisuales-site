@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Remote Mix · DH Audiovisuales</title>
+<meta name="description" content="Remote Mix: controla tu mesa de mezclas de vídeo desde el móvil Android. Descarga para PC y para Android.">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --teal: #0F766E; --teal-d: #0B4A44; --bg: #0d1211; --panel: #17201e; --text: #eef3f2; --mute: #9db0ac; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.55; }
+  header { background: linear-gradient(135deg, #0F766E 0%, #115E59 55%, #0B4A44 100%); padding: 44px 20px 40px; text-align: center; }
+  header img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 8px 24px #0006; }
+  h1 { margin: 14px 0 4px; font-size: 2rem; }
+  header p { margin: 0 auto; max-width: 560px; color: #d6efeb; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 56px; display: grid; gap: 16px; }
+  .card { background: var(--panel); border-radius: 16px; padding: 20px; }
+  h2 { margin: 0 0 8px; font-size: 1.15rem; }
+  .btns { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .btn { display: block; text-align: center; background: var(--teal); color: #fff; text-decoration: none; padding: 16px 12px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; }
+  .btn:hover { background: #14958b; }
+  .btn small { display: block; font-weight: 400; opacity: .85; font-size: .82rem; margin-top: 2px; }
+  ol { margin: 8px 0 0; padding-left: 22px; }
+  li { margin: 6px 0; }
+  .warn { background: #3b2f10; border: 1px solid #a16207; border-radius: 12px; padding: 14px; color: #fde68a; }
+  .warn b { color: #fcd34d; }
+  .mute { color: var(--mute); font-size: .9rem; }
+  footer { text-align: center; color: var(--mute); font-size: .85rem; padding: 0 16px 32px; }
+  a { color: #5eead4; }
+</style>
+</head>
+<body>
+<header>
+  <img src="icon.png" alt="Remote Mix">
+  <h1>Remote Mix</h1>
+  <p>Controla tu mesa de mezclas desde el móvil: monitores de Previo y Programa, CORTE, TRANSICIÓN y 6 entradas con luz tally.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>Descargas</h2>
+    <div class="btns">
+      <a class="btn" href="Instalar-RemoteMix.exe">Programa para el PC<small>Windows · se instala en el PC donde está vMix</small></a>
+      <a class="btn" href="RemoteMix.apk">App para Android<small>APK · instalar en el móvil</small></a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Cómo se usa</h2>
+    <ol>
+      <li>Instala el <b>programa para el PC</b> en el ordenador donde corre vMix. Se queda en segundo plano, con un icono junto al reloj de Windows.</li>
+      <li>En vMix activa <b>Settings → Web Controller</b> (puerto 8088).</li>
+      <li>Haz clic en el icono de Remote Mix junto al reloj: se abre una ventana con la <b>IP del PC</b>.</li>
+      <li>Instala la <b>app en el móvil</b>, escribe esa IP y pulsa <b>Conectar</b>. El móvil y el PC deben estar en la misma wifi.</li>
+    </ol>
+  </section>
+
+  <section class="warn">
+    <b>Si Windows muestra un aviso azul «Windows protegió su PC»</b><br>
+    Es normal: el programa todavía no está firmado digitalmente. Pulsa <b>«Más información»</b> y después <b>«Ejecutar de todas formas»</b>.
+  </section>
+
+  <section class="card">
+    <h2>Instalar la app en Android</h2>
+    <p class="mute" style="margin:0">Al ser un APK que no viene de Play Store, Android pedirá permiso para instalar desde esta fuente y puede mostrar un aviso de seguridad. Acepta y continúa con la instalación.</p>
+  </section>
+</main>
+<footer>© DH Audiovisuales · <a href="mailto:info@dhaudiovisuales.com">info@dhaudiovisuales.com</a><br>Remote Mix no está afiliado a vMix ni a sus propietarios. «vMix» es una marca de sus respectivos dueños.</footer>
+</body>
+</html>
