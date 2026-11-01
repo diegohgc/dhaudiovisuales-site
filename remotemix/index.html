@@ -21,6 +21,8 @@
   .btns { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .btn { display: block; text-align: center; background: var(--teal); color: #fff; text-decoration: none; padding: 16px 12px; border-radius: 12px; font-weight: 700; font-size: 1.05rem; }
   .btn:hover { background: #14958b; }
+  .btn.soon { background: #26332f; color: #9db0ac; cursor: default; }
+  .btn.soon:hover { background: #26332f; }
   .btn small { display: block; font-weight: 400; opacity: .85; font-size: .82rem; margin-top: 2px; }
   ol { margin: 8px 0 0; padding-left: 22px; }
   li { margin: 6px 0; }
@@ -42,7 +44,7 @@
     <h2>Descargas</h2>
     <div class="btns">
       <a class="btn" href="Instalar-RemoteMix.exe">Programa para el PC<small>Windows · se instala en el PC donde está vMix</small></a>
-      <a class="btn" href="RemoteMix.apk">App para Android<small>APK · instalar en el móvil</small></a>
+      <div class="btn soon">App para Android<small>Próximamente en Google Play</small></div>
     </div>
   </section>
 
@@ -50,10 +52,10 @@
     <h2>Cómo se usa</h2>
     <ol>
       <li>Instala el <b>programa para el PC</b> en el ordenador donde corre vMix. Se queda en segundo plano, con un icono junto al reloj de Windows.</li>
-      <li>En vMix activa <b>Settings → Web Controller</b> (puerto 8088).</li>
       <li>Haz clic en el icono de Remote Mix junto al reloj: se abre una ventana con la <b>IP del PC</b>.</li>
-      <li>Instala la <b>app en el móvil</b>, escribe esa IP y pulsa <b>Conectar</b>. El móvil y el PC deben estar en la misma wifi.</li>
+      <li>Instala la <b>app en el móvil</b> (Google Play), escribe esa IP y pulsa <b>Conectar</b>. El móvil y el PC deben estar en la misma wifi.</li>
     </ol>
+    <p class="mute" style="margin:12px 0 0">Recuerda tener activado <b>Web Controller</b> en vMix.</p>
   </section>
 
   <section class="warn">
@@ -61,10 +63,6 @@
     Es normal: el programa todavía no está firmado digitalmente. Pulsa <b>«Más información»</b> y después <b>«Ejecutar de todas formas»</b>.
   </section>
 
-  <section class="card">
-    <h2>Instalar la app en Android</h2>
-    <p class="mute" style="margin:0">Al ser un APK que no viene de Play Store, Android pedirá permiso para instalar desde esta fuente y puede mostrar un aviso de seguridad. Acepta y continúa con la instalación.</p>
-  </section>
 </main>
 <footer>© DH Audiovisuales · <a href="mailto:info@dhaudiovisuales.com">info@dhaudiovisuales.com</a><br>Remote Mix no está afiliado a vMix ni a sus propietarios. «vMix» es una marca de sus respectivos dueños.</footer>
 </body>
